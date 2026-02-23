@@ -145,11 +145,11 @@ The model runs at ~20–30ms per frame and successfully detects plants in live v
 ### 🌵 Cactus (very confident)
 <img src="screenshots/cactus_detection.png" width="500">
 
-### 🌿 Succulent (also strong)
-<img src="screenshots/succulent_detection.png" width="500">
-
 ### 🍃 Leafy Detection
 <img src="screenshots/leafy_detection.png" width="500">
+
+### 🌿 Succulent (also strong)
+<img src="screenshots/succulent_detection.png" width="500">
 
 ### 😄 Fun Observation
 At one point, the model detected **me** as a leafy plant.  
