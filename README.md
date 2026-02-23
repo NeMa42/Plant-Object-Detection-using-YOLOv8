@@ -143,13 +143,13 @@ yolo detect predict model=runs/detect/train/weights/best.pt source=0 show=True c
 The model runs at ~20–30ms per frame and successfully detects plants in live video.
 
 ### 🌵 Cactus (very confident)
-![Cactus Detection](screenshots/cactus_detection.png)
+<img src="screenshots/cactus_detection.png" width="500">
 
 ### 🌿 Succulent (also strong)
-![Succulent Detection](screenshots/succulent_detection.png)
+<img src="screenshots/succulent_detection.png" width="500">
 
-### 🍃 Leafy Plant (a bit tricky)
-![Leafy Detection](screenshots/leafy_detection.png)
+### 🍃 Leafy Detection
+<img src="screenshots/leafy_detection.png" width="500">
 
 ### 😄 Fun Observation
 At one point, the model detected **me** as a leafy plant.  
