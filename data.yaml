@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 3
+names: ['cactus', 'leafy_plant', 'succulent']
+
+roboflow:
+  workspace: nursery-kjfo4
+  project: plant-object-detection-yhctt
+  version: 2
+  license: Private
+  url: https://app.roboflow.com/nursery-kjfo4/plant-object-detection-yhctt/2
