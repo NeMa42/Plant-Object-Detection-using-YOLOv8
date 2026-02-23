@@ -7,11 +7,11 @@ The model was trained from scratch on a custom dataset consisting of:
 - 🌵 Cactus  
 - 🌱 Succulents  
 
-The goal was not only to train a model, but to understand its behavior, limitations, and generalization performance.
+The goal was to train a model,to understand its behavior, limitations, and generalization performance.
 
 ---
 
-## 📌 Problem Statement
+## Problem Statement
 
 Train a custom object detection model capable of detecting and classifying plant types in real-world images.
 
@@ -24,7 +24,7 @@ Unlike pre-trained datasets, this project required:
 
 ---
 
-## 📊 Dataset
+## Dataset
 
 Total images:
 
@@ -46,7 +46,7 @@ Dataset was split into:
 
 ---
 
-## 🏷 Annotation
+## Annotation
 
 Images were manually annotated using Roboflow.
 
@@ -54,7 +54,7 @@ The dataset was exported in YOLOv8 format and resized to 512x512 resolution.
 
 ---
 
-## 🚀 Model Training
+## Model Training
 
 Model: `yolov8n.pt`  
 Epochs: 30  
@@ -71,7 +71,7 @@ yolo detect train data=data.yaml model=yolov8n.pt epochs=30 imgsz=512
 
 ---
 
-## 📈 Evaluation Metrics
+## Evaluation Metrics
 
 After 30 epochs of training, the model achieved:
 
@@ -91,7 +91,7 @@ Confusion matrix and training curves can be found in the `/results` folder.
 
 ---
 
-## 🔎 Generalization Testing (Unseen Images)
+## Generalization Testing (Unseen Images)
 
 To evaluate real-world robustness, the model was tested on **28 completely new plant images**:
 
@@ -108,7 +108,7 @@ source=test_images \
 conf=0.25
 ```
 
-## 📊 Results Summary
+## Results Summary
 
 The model was evaluated on 28 unseen plant images:
 
@@ -132,7 +132,7 @@ Overall, the model demonstrated strong performance on familiar visual patterns a
 
 ---
 
-## 🔎 Observations
+## Observations
 
 - Cactus samples with smoother or denser structure were more likely to be confused with leafy plants.
 - A purple inchplant introduced color variation not present in training data, affecting classification.
@@ -142,7 +142,7 @@ Overall, the model demonstrated strong performance on familiar visual patterns a
 
 ---
 
-## 🧠 Key Insights
+## Key Insights
 
 - Dataset size and class balance significantly influence performance.
 - Visual diversity improves generalization more effectively than model scaling.
@@ -152,7 +152,7 @@ Overall, the model demonstrated strong performance on familiar visual patterns a
 
 ---
 
-## 🔮 Future Improvements
+## Future Improvements
 
 To improve performance and robustness:
 
