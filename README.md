@@ -7,7 +7,7 @@ The model was trained from scratch on a custom dataset consisting of:
 - 🌵 Cactus  
 - 🌱 Succulents  
 
-The goal was not only to train a model, but to understand its behavior, limitations, and generalization performance.
+The goal was to train a model,to understand its behavior, limitations, and generalization performance.
 
 ---
 
