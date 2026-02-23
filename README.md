@@ -1,4 +1,5 @@
-# Plant-Object-Detection-using-YOLOv8
+# 🌿 Plant Object Detection using YOLOv8
+
 This project demonstrates an end-to-end computer vision pipeline for detecting and classifying plant categories using YOLOv8.
 
 The model was trained from scratch on a custom dataset consisting of:
@@ -7,7 +8,7 @@ The model was trained from scratch on a custom dataset consisting of:
 - 🌵 Cactus  
 - 🌱 Succulents  
 
-The goal was to train a model,to understand its behavior, limitations, and generalization performance.
+The objective was to build a custom object detection model, analyze its behavior, evaluate its performance, and understand its limitations and generalization capabilities.
 
 ---
 
@@ -15,12 +16,12 @@ The goal was to train a model,to understand its behavior, limitations, and gener
 
 Train a custom object detection model capable of detecting and classifying plant types in real-world images.
 
-Unlike pre-trained datasets, this project required:
+Unlike using large pre-trained datasets, this project required:
 
-- Collecting custom images
-- Manual bounding box annotation
-- YOLOv8 training
-- Evaluation on unseen plant species
+- Collecting a custom image dataset  
+- Manually annotating bounding boxes  
+- Training a YOLOv8 model  
+- Evaluating performance on unseen plant images  
 
 ---
 
@@ -129,6 +130,33 @@ The model was evaluated on 28 unseen plant images:
 The remaining images were correctly classified.
 
 Overall, the model demonstrated strong performance on familiar visual patterns and moderate degradation when tested on visually atypical samples.
+
+---
+## Real-Time Deployment (Webcam Testing)
+
+After training the YOLOv8 model, I connected it to my laptop’s webcam to test real-time detection.
+
+```bash
+yolo detect predict model=runs/detect/train/weights/best.pt source=0 show=True conf=0.4
+```
+
+The model runs at ~20–30ms per frame and successfully detects plants in live video.
+
+### 🌵 Cactus (very confident)
+![Cactus Detection](screenshots/cactus_detection.png)
+
+### 🌿 Succulent (also strong)
+![Succulent Detection](screenshots/succulent_detection.png)
+
+### 🍃 Leafy Plant (a bit tricky)
+![Leafy Detection](screenshots/leafy_detection.png)
+
+### 😄 Fun Observation
+At one point, the model detected **me** as a leafy plant.  
+This likely happened due to similar color patterns and limited dataset size — a great reminder of how models generalize (or overfit).
+
+This step completed the full ML lifecycle:
+data collection → annotation → training → evaluation → real-time deployment.
 
 ---
 
