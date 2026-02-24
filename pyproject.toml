@@ -1,0 +1,8 @@
+[project]
+name = "plant-object-detection-using-yolov8"
+version = "0.1.0"
+requires-python = ">=3.13"
+dependencies = [
+    "matplotlib>=3.10.8",
+    "ultralytics>=8.4.15",
+]

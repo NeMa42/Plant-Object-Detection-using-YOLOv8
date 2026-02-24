@@ -63,11 +63,17 @@ Image Size: 512
 
 Training was performed locally using the Ultralytics framework.
 
+### Build environment
+Environment is built using uv package manager. Dependencies are in `pyproject.toml`. 
+
+```bash
+uv sync
+```
+
 ### Training Command
 
 ```bash
-pip install ultralytics
-yolo detect train data=data.yaml model=yolov8n.pt epochs=30 imgsz=512
+uv run yolo detect train data=data.yaml model=yolov8n.pt epochs=30 imgsz=512
 ```
 
 ---
@@ -103,8 +109,8 @@ To evaluate real-world robustness, the model was tested on **28 completely new p
 ### Inference Command
 
 ```bash
-yolo detect predict \
-model=runs/detect/train/weights/best.pt \
+uv run yolo detect predict \
+model=weights/best.pt \
 source=test_images \
 conf=0.25
 ```
@@ -137,7 +143,7 @@ Overall, the model demonstrated strong performance on familiar visual patterns a
 After training the YOLOv8 model, I connected it to my laptop’s webcam to test real-time detection.
 
 ```bash
-yolo detect predict model=runs/detect/train/weights/best.pt source=0 show=True conf=0.4
+uv run yolo detect predict model=weights/best.pt source=0 show=True conf=0.4
 ```
 
 The model runs at ~20–30ms per frame and successfully detects plants in live video.
