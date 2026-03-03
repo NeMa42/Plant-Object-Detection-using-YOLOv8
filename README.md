@@ -1,4 +1,8 @@
 # 🌿 Plant Object Detection using YOLOv8
+![Python](https://img.shields.io/badge/Python-3.10-blue?style=for-the-badge)
+![YOLOv8](https://img.shields.io/badge/YOLOv8-Ultralytics-orange?style=for-the-badge)
+![Roboflow](https://img.shields.io/badge/Roboflow-Annotation-purple?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
 
 This project demonstrates an end-to-end computer vision pipeline for detecting and classifying plant categories using YOLOv8.
 
